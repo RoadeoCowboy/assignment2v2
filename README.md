@@ -23,6 +23,9 @@ Technology Stack:
 - MongoLab
 - Kafka
 
+Files:
+- resources/application.properties: connection file to hosted MongoLab. (test123:test123/mongolab) -> (username:password/DB name)
+
 Sample Input for testing (Postman recommended):
 - Postman configuration: raw -> JSON format; Header = "Content-Type", Value = "application/json"
 - Moderator
