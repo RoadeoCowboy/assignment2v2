@@ -15,6 +15,7 @@ Features:
 - Scheduler (Spring Scheduler Package, checks for expired polls every 5 minutes).
 - Remote Messaging (Message broker (Kafka Producer) sends emails with set (topic, message) for expired polls).
 - Peristent Data (MongoLab).
+- Amazon Cloud Hosting (EC2)
 
 Technology Stack:
 - Spring MVC
@@ -22,12 +23,16 @@ Technology Stack:
 - Additional Spring Libraries (Authentication, HTTP Validation, Scheduler)
 - MongoLab
 - Kafka
+- Amazon Web Services (EC2)
 
 Files:
 - resources/application.properties: connection file to hosted MongoLab. (test123:test123/mongolab) -> (username:password/DB name)
 
 Sample Input for testing (Postman recommended):
 - Postman configuration: raw -> JSON format; Header = "Content-Type", Value = "application/json"
+
+- Endpoint (local): http://localhost:8080/api/v1/moderators/
+- Endpoint (hosted): http://ec2-54-153-90-122.us-west-1.compute.amazonaws.com:8080/api/v1/moderators/
 - Moderator
 {
  "name": "John Smith",
@@ -35,6 +40,8 @@ Sample Input for testing (Postman recommended):
  "password": "secret"
 }
 
+- Endpoint (local): http://localhost:8080/api/v1/moderators/YYYYYY/polls
+- Endpoint (hosted): http://ec2-54-153-90-122.us-west-1.compute.amazonaws.com:8080/api/v1/moderators/XXXXXX/polls
 - Poll
 {
  "question": "What type of smartphone do you have?",
