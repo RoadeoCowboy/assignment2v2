@@ -16,7 +16,7 @@ public class SimpleProducer {
 
     public SimpleProducer() {
 //        properties.put("metadata.broker.list", "localhost:9092"); For testing on localhost only.
-        properties.put("metadata.broker.list", "54.149.84.25:9092"); //For submission only, professor's endpoint.
+        properties.put("metadata.broker.list", "54.68.83.161:9092"); //For submission only, professor's endpoint.
         properties.put("serializer.class", "kafka.serializer.StringEncoder");
         properties.put("request.required.acks", "1");
         producer = new Producer<>(new ProducerConfig(properties));

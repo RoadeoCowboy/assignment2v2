@@ -215,7 +215,7 @@ public class Controller {
                         + result[0] + "," + choice[1] + "=" + result[1] + "]";
 
                 System.out.println(message);
-                String topic = "cmpe273-topic";
+                String topic = "cmpe273-new-topic";
 //                SimpleProducer producer = new SimpleProducer();
                 SimpleProducer.sendMessage(topic, message);
                 //Send to Kafka.
